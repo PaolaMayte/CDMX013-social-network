@@ -1,5 +1,24 @@
-// Este es el punto de entrada de tu aplicacion
+import { Welcome } from './components/Welcome.js';
+import { SingUp } from './components/SingUp.js';
 
-import { myFunction } from './lib/index.js';
 
-myFunction();
+const root = document.getElementById('root');
+
+const routes = {
+    '/': Welcome,
+    '/singup': SingUp,
+};
+
+// root.appendChild (Welcome());
+export const onNavigate = (pathname) => {
+    window.history.pushState(
+        {},
+        pathname,
+        window.location.origin + pathname,
+    );
+    root.appendChild(routes[pathname]());
+};
+
+const component = routes[window.location.pathname];
+
+root.appendChild(component());
