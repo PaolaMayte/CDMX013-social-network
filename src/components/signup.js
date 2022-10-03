@@ -24,12 +24,12 @@ export const signup = () => {
       console.log('ya se registro', user);
       // ...
     })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      // ..
-      console.log('Nel no se registro', errorMessage);
-    });
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // ..
+        console.log('Nel no se registro', errorMessage);
+      });
   });
 
   div.append(title, inputName, inputEmail, inputPassword, button, buttonBack);

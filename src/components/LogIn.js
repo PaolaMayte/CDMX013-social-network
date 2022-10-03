@@ -22,7 +22,7 @@ export const login = () => {
   buttonBack.textContent = 'HolaAline';
   buttonLogin.textContent = 'LOG IN';
   title.textContent = 'LOG IN';
-  //buttonBack.textContent = 'Back';
+  // buttonBack.textContent = 'Back';
   buttonBack.addEventListener('click', () => {
     onNavigate('/');
   });
