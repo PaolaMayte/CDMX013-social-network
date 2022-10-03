@@ -1,22 +1,33 @@
 import { onNavigate } from '../main.js';
 
 export const login = () => {
-    const div = document.createElement('div');
-    const title = document.createElement('h2');
-    const inputName = document.createElement('input');
-    const inputEmail = document.createElement('input');
-    const button = document.createElement('button');
-    const buttonBack = document.createElement('button');
+  const div = document.createElement('div');
+  div.setAttribute('class', 'div-login');
 
+  const title = document.createElement('h2');
+  title.setAttribute('class', 'title-login');
 
-    button.textContent = 'LOG IN';
-    title.textContent = 'LOG IN';
+  const inputName = document.createElement('input');
+  inputName.setAttribute('class', 'Name-login');
 
-    buttonBack.addEventListener('click', () => {
-        onNavigate('/');
-    })
+  const inputEmail = document.createElement('input');
+  inputEmail.setAttribute('class', 'Email-login');
 
-    div.append(title, inputName, inputEmail, button, buttonBack);
+  const buttonLogin = document.createElement('button');
+  buttonLogin.setAttribute('id', 'buttonLogin-login');
 
-    return div;
+  const buttonBack = document.createElement('button');
+  buttonBack.setAttribute('id', 'buttonBack-login');
+
+  buttonBack.textContent = 'HolaAline';
+  buttonLogin.textContent = 'LOG IN';
+  title.textContent = 'LOG IN';
+  // buttonBack.textContent = 'Back';
+  buttonBack.addEventListener('click', () => {
+    onNavigate('/');
+  });
+
+  div.append(title, inputName, inputEmail, buttonLogin, buttonBack);
+
+  return div;
 };
