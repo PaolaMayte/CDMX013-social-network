@@ -4,9 +4,14 @@ import { crearUsuaria } from '../lib/auth.js';
 export const signup = () => {
   const div = document.createElement('div');
   const title = document.createElement('h2');
-  const inputName = document.createElement('input');
+
   const inputEmail = document.createElement('input');
+  inputEmail.setAttribute('placeholder', 'email');
+
   const inputPassword = document.createElement('input');
+  inputPassword.setAttribute('placeholder', 'password');
+
+
   const button = document.createElement('button');
   const buttonBack = document.createElement('button');
 
@@ -18,7 +23,7 @@ export const signup = () => {
   });
 
   button.addEventListener('click', () => {
-    crearUsuaria('carlos@carlos.com', '123456').then((userCredential) => {
+    crearUsuaria(inputEmail.value, inputPassword.value).then((userCredential) => {
       // Signed in
       const user = userCredential.user;
       console.log('ya se registro', user);
@@ -32,7 +37,7 @@ export const signup = () => {
       });
   });
 
-  div.append(title, inputName, inputEmail, inputPassword, button, buttonBack);
+  div.append(title, inputEmail, inputPassword, button, buttonBack);
 
   return div;
 };
