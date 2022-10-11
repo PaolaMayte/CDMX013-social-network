@@ -7,7 +7,6 @@ export const auth = getAuth();
 
 export const crearUsuaria = (email, password) => createUserWithEmailAndPassword(auth, email, password);
 
-
-export const ingresarusuaria = (email, password) => signInWithEmailAndPassword (auth, email, password);
+export const ingresarusuaria = (email, password) => signInWithEmailAndPassword(auth, email, password);
 
 

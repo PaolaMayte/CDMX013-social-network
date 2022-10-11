@@ -9,10 +9,13 @@ export const login = () => {
   title.setAttribute('class', 'title-login');
 
   const emailLogin = document.createElement('input');
-  emailLogin.setAttribute('class', 'emailLogin');
+  emailLogin.setAttribute('class', 'input');
+
 
   const passLogin = document.createElement('input');
-  passLogin.setAttribute('class', 'passLogin');
+  passLogin.setAttribute('class', 'input');
+  passLogin.setAttribute('type', 'password');
+
 
   const buttonLogin = document.createElement('button');
   buttonLogin.setAttribute('id', 'buttonLogin-login');

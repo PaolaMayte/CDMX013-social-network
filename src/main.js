@@ -2,8 +2,9 @@ import { welcome } from './components/welcome.js';
 import { signup } from './components/Signup.js';
 import { login } from './components/Login.js';
 import { feed } from './components/feed.js';
-import {onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.9.3/firebase-auth.js';
-import { auth } from './lib/auth.js';
+// import { onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.9.3/firebase-auth.js';
+// import { auth } from './lib/auth.js';
+// import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.9.3/firebase-firestore.js';
 
 const root = document.getElementById('root');
 
@@ -29,11 +30,10 @@ const component = routes[window.location.pathname];
 root.appendChild(component());
 
 onAuthStateChanged(auth, (user) => {
-  console.log(user)
+  console.log(user);
   if (user) {
-  
-    onNavigate('/feed')
+    onNavigate('/feed');
   } else {
-    onNavigate('/')
+    onNavigate('/');
   }
 });

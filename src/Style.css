@@ -5,10 +5,46 @@ body {
 }
 
 .welcome {
+	background-color: rgba(0, 0, 0, 0);
+	color: rgb(255, 255, 255);
+	border: 1px solid #fff;
 	display: flex;
-	justify-content: center;
 	align-items: center;
+	justify-content: center;
+	padding: 12px;
+	border-radius: 20px;
+	height: 50em;
+	width: 30vh;
+	padding-top: 20px;
+	word-wrap: normal;
 	flex-direction: column;
+}
+
+.buttonlogin-welcome {
+	text-align: center;
+	width: 226px;
+	height: 44px;
+	left: 102px;
+	top: 457px;
+	background-color: #191a19;
+	border: 1px solid #FFFFFF;
+	border-radius: 100px;
+	font-family: 'Denk One', sans-serif;
+	color: #FFFFFF;
+}
+
+
+.buttonloginSingup {
+	text-align: center;
+	width: 226px;
+	height: 44px;
+	left: 102px;
+	top: 457px;
+	background-color: #191a19;
+	border: 1px solid #FFFFFF;
+	border-radius: 100px;
+	font-family: 'Denk One', sans-serif;
+	color: #FFFFFF;
 }
 
 .title-welcome {
@@ -71,4 +107,28 @@ body {
 	background-color: #DFAEFF;
 	font-family: 'Denk One', sans-serif;
 
+}
+
+.input {
+	display: flex;
+	width:22vh;
+	height:30px;
+	background: #FFFFFF;
+	border: 1px solid #000;
+	border-radius: 100px; 
+}
+
+.caja {
+	background-color: rgba(0, 0, 0, 0,);
+	color: rgb(255, 255, 255);
+	border: 1px solid #fff;
+	display: flex;
+	align-items:center;
+	justify-content: center;
+	padding: 12px;
+	height: 50em;
+	width: 30vh;
+	padding-top: 20px;
+	word-wrap: normal;
+	flex-direction: column;
 }
