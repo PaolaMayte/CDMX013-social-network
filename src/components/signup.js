@@ -4,12 +4,25 @@ import { crearUsuaria } from '../lib/auth.js';
 export const signup = () => {
   const div = document.createElement('div');
   const title = document.createElement('h2');
-  const inputName = document.createElement('input');
-  const inputEmail = document.createElement('input');
-  const inputPassword = document.createElement('input');
-  const button = document.createElement('button');
-  const buttonBack = document.createElement('button');
+  title.setAttribute('class', 'title-login');
+  div.setAttribute('class', 'caja');
 
+  const inputEmail = document.createElement('input');
+  inputEmail.setAttribute('placeholder', 'email');
+  inputEmail.setAttribute('class', 'input');
+
+  const inputPassword = document.createElement('input');
+  inputPassword.setAttribute('placeholder', 'password');
+  inputPassword.setAttribute('class', 'input');
+  inputPassword.setAttribute('type', 'password');
+
+  const button = document.createElement('button');
+  button.setAttribute('id', 'buttonLogin-login');
+
+  const buttonBack = document.createElement('button');
+  buttonBack.setAttribute('id', 'buttonlogin-login');
+
+  buttonBack.textContent = 'Back';
   button.textContent = 'SIGN UP';
   title.textContent = 'SIGN UP';
 
@@ -18,7 +31,7 @@ export const signup = () => {
   });
 
   button.addEventListener('click', () => {
-    crearUsuaria('carlos@carlos.com', '123456').then((userCredential) => {
+    crearUsuaria(inputEmail.value, inputPassword.value).then((userCredential) => {
       // Signed in
       const user = userCredential.user;
       console.log('ya se registro', user);
@@ -32,7 +45,7 @@ export const signup = () => {
       });
   });
 
-  div.append(title, inputName, inputEmail, inputPassword, button, buttonBack);
+  div.append(title, inputEmail, inputPassword, button, buttonBack);
 
   return div;
 };
