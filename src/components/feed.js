@@ -1,4 +1,5 @@
 import { createPost } from './Createpost.js';
+import { getPost } from '../lib/post.js';
 
 export const feed = () => {
   const div = document.createElement('div');
@@ -7,6 +8,10 @@ export const feed = () => {
 
   title.textContent = 'FEED';
   buttonLogout.textContent = 'LOG OUT';
+
+  getPost((document) => {
+console.log('data', document._snapshot.docs);
+  });
 
   div.append(createPost(), title, buttonLogout);
 
